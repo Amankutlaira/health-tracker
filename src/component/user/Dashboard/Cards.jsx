@@ -20,14 +20,14 @@ const Cards = () => {
         overflowY: 'scroll',
         scrollbarWidth: "none",
         height: "575px",
-        paddingTop: "10px",
+        paddingTop: "10px"
       }}
       id="container"
     >
       {medicines.map((medicine, index) => (
         <div
           key={index}
-          id={`medicine-${index + 1}`} // Unique ID for each card
+          id={`medicine-${index + 1}`}
           style={{
             backgroundColor: "lightgreen",
             width: "400px",
@@ -41,7 +41,7 @@ const Cards = () => {
               backgroundColor: "lightblue",
               borderTopLeftRadius: "20px",
               borderTopRightRadius: "20px",
-              textAlign: "center",
+              textAlign: "center"
             }}
           >
             {medicine.name}
