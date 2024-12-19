@@ -8,7 +8,7 @@ import History from "../History/History"
 import { Routes,Route } from "react-router-dom"
 const Content=()=>{
     return(
-        <>
+        <div style={{minHeight:"calc(100vh-50px)"}}>
             <Routes>
                 <Route path="/" element={<Cards/>}/>
                 <Route path="/profile" element={<Profile/>}/>
@@ -18,7 +18,7 @@ const Content=()=>{
                 <Route path="/assistance" element={<Assistance/>}/>
                 <Route path="/history" element={<History/>}/>
             </Routes>
-        </>
+        </div>
     )
 }
 

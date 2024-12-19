@@ -1,7 +1,7 @@
 const Footer=()=>{
     return(
         <>
-            <h1>Footer</h1>
+            <h1 style={{height:"50px",backgroundColor:"#333",color:"#fff",display:"flex",justifyContent:"center",alignItems:"center",position:"relative"}}>Footer</h1>
         </>
     )
 }
