@@ -1,53 +1,102 @@
-import React from 'react';
+import React from "react";
+import { cardCont, card1, card2 } from "../../../styles";
+import { useState, useEffect } from "react";
+import medData from "../../../../public/medicationCard.json"
+
+const medicationData = medData
 
 const Cards = () => {
-  const medicines = [
-    { name: "Medicine1", description: "Description1", Time: "Time1" },
-    { name: "Medicine2", description: "Description2", Time: "Time2" },
-    { name: "Medicine3", description: "Description3", Time: "Time3" },
-    { name: "Medicine4", description: "Description4", Time: "Time4" },
-    { name: "Medicine5", description: "Description5", Time: "Time5" },
-    { name: "Medicine6", description: "Description6", Time: "Time6" },
-  ];
+  const [medicines, setMedicines] = useState([]);
+
+  useEffect(() => {
+    const formattedMedicines = medicationData.map((med) => ({
+      id: med.id,
+      name: med.name,
+      dosage: med.dosage,
+      frequency: med.frequency,
+      endDate: med.endDate,
+      notes: med.notes,
+      taken: med.taken,
+    }));
+    setMedicines(formattedMedicines);
+  }, []);
 
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "auto auto auto",
-        gap: "30px",
-        justifyContent: "center",
-        overflowY: 'scroll',
-        scrollbarWidth: "none",
-        height: "575px",
-        paddingTop: "10px"
-      }}
-      id="container"
-    >
-      {medicines.map((medicine, index) => (
+    <div style={cardCont} id="container">
+      {medicines.map((medicine) => (
         <div
-          key={index}
-          id={`medicine-${index + 1}`}
+          id={medicine.id}
           style={{
-            backgroundColor: "lightgreen",
             width: "400px",
-            height: "200px",
+            height: "300px",
             borderRadius: "20px",
+            backgroundImage: "url(./card2.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            position: "relative",
           }}
         >
-          <h2
+          <h2 style={card2}>{medicine.name}</h2>
+          <div style={{ padding: "10px" }}>
+            <h4 style={{ fontFamily: "sans-serif", wordWrap: "break-word" }}>
+              Dosage: {medicine.dosage}
+            </h4>
+            <h3 style={{ fontFamily: "sans-serif" }}>
+              Frequency: {medicine.frequency}
+            </h3>
+            <h3 style={{ fontFamily: "sans-serif" }}>
+              End Day: {medicine.endDate || "N/A"}
+            </h3>
+            <h3 style={{ fontFamily: "sans-serif" }}>
+              Notes: {medicine.notes || "None"}
+            </h3>
+            <h3 style={{ fontFamily: "sans-serif" }}>
+              Taken: {medicine.taken ? "Yes" : "No"}
+            </h3>
+          </div>
+          <div
             style={{
-              paddingBottom: "25px",
-              backgroundColor: "lightblue",
-              borderTopLeftRadius: "20px",
-              borderTopRightRadius: "20px",
-              textAlign: "center"
+              display: "flex",
+              justifyContent: "space-around",
+              bottom: "10px",
+              position: "absolute",
+              width: "100%",
             }}
           >
-            {medicine.name}
-          </h2>
-          <h4 style={{ paddingBottom: "20px" }}>{medicine.description}</h4>
-          <h3 style={{ paddingBottom: "15px" }}>{medicine.Time}</h3>
+            <button
+              style={{
+                backgroundImage: "url(./button.png)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                width: "150px",
+                height: "45px",
+                border: "none",
+                backgroundColor: "white",
+                mixBlendMode: "multiply",
+                borderRadius: "4vh",
+              }}
+            >
+              Request Renewal
+            </button>
+            <button
+              style={{
+                backgroundImage: "url(./button.png)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                width: "150px",
+                height: "45px",
+                border: "none",
+                backgroundColor: "white",
+                mixBlendMode: "multiply",
+                borderRadius: "4vh",
+              }}
+            >
+              Mark as Done
+            </button>
+          </div>
         </div>
       ))}
     </div>

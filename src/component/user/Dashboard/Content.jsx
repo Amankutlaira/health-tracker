@@ -6,9 +6,10 @@ import Analytics from "../Analytics/Analytics"
 import Assistance from "../Assistance/Assistance"
 import History from "../History/History"
 import { Routes,Route } from "react-router-dom"
+import { contentStyle } from "../../../styles"
 const Content=()=>{
     return(
-        <div style={{minHeight:"calc(100vh-50px)"}}>
+        <div style={contentStyle}>
             <Routes>
                 <Route path="/" element={<Cards/>}/>
                 <Route path="/profile" element={<Profile/>}/>
