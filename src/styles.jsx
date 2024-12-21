@@ -1,16 +1,13 @@
 export const contentStyle={
     backgroundImage: "url(./content1.jpg)",
     backgroundSize:"cover",
-    backgroundPosition:"center",
     backgroundRepeat:"no-repeat",
     display:"flex",
     justifyContent:"center",
-    alignItems:"center",
     width:"100%",
     height:"80vh",
     overflowY: 'scroll',
     scrollbarWidth: "none",
-    paddingTop:"100px"
 }
 export const footer={
     height:"10vh",
@@ -27,7 +24,6 @@ export const cardCont={
     gridTemplateColumns: "auto auto auto",
     gap: "30px",
     justifyContent: "center",
-    marginTop:"270px"
 }
 export const card1={
     width: "400px",
@@ -73,6 +69,7 @@ export const ProCont={
     height:"500px",
     borderRadius:"20px",
     backgroundImage:"url(./proback.jpg)",
+    alignSelf:"center"
 }
 
 export const ProImg={

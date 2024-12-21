@@ -2,7 +2,7 @@ import { ProImg } from "../../../styles";
 
 const Analytics = () => {
   return (
-    <div style={{display:"flex",justifyContent:"space-around",height:"75vh",width:"100%"}}>
+    <div style={{display:"flex",justifyContent:"space-around",height:"75vh",width:"100%",alignSelf:"center"}}>
         <img
         src="./appointment.jpg"
         alt=""
