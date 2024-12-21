@@ -1,7 +1,5 @@
-const PatientSchedule=()=>{
-    return(
-        <h1>PatientSchedule</h1>
-    )
-}
+const PatientSchedule = () => {
+  return <h1>PatientSchedule</h1>;
+};
 
-export default PatientSchedule
+export default PatientSchedule;

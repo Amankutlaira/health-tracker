@@ -1,9 +1,9 @@
 import React from "react";
 import { cardCont, card1, card2 } from "../../../styles";
 import { useState, useEffect } from "react";
-import medData from "../../../../public/medicationCard.json"
+import medData from "../../../../public/medicationCard.json";
 
-const medicationData = medData
+const medicationData = medData;
 
 const Cards = () => {
   const [medicines, setMedicines] = useState([]);
@@ -71,11 +71,10 @@ const Cards = () => {
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 width: "150px",
-                height: "45px",
+                height: "50px",
                 border: "none",
                 backgroundColor: "white",
                 mixBlendMode: "multiply",
-                borderRadius: "4vh",
               }}
             >
               Request Renewal
@@ -87,11 +86,10 @@ const Cards = () => {
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 width: "150px",
-                height: "45px",
+                height: "50px",
                 border: "none",
                 backgroundColor: "white",
                 mixBlendMode: "multiply",
-                borderRadius: "4vh",
               }}
             >
               Mark as Done

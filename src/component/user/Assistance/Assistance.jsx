@@ -1,9 +1,9 @@
-const Assistance=()=>{
-    return(
-        <>
-            <h1>Assistance</h1>
-        </>
-    )
-}
+const Assistance = () => {
+  return (
+    <>
+      <h1>Assistance</h1>
+    </>
+  );
+};
 
-export default Assistance
+export default Assistance;

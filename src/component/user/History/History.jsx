@@ -1,9 +1,9 @@
-const History=()=>{
-    return(
-        <>
-            <h1>History</h1>
-        </>
-    )
-}
+const History = () => {
+  return (
+    <>
+      <h1>History</h1>
+    </>
+  );
+};
 
-export default History
+export default History;

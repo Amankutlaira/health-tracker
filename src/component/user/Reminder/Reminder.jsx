@@ -1,9 +1,9 @@
-const Reminder=()=>{
-    return(
-        <>
-            <h1>Reminder</h1>
-        </>
-    )
-}
+const Reminder = () => {
+  return (
+    <>
+      <h1>Reminder</h1>
+    </>
+  );
+};
 
-export default Reminder
+export default Reminder;

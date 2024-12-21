@@ -11,7 +11,22 @@ const AdmNav = () => {
           width: "20%",
         }}
       >
-        <img src="./logo3.png" alt="Logo" style={{textDecorationLine: "none",fontFamily: "sans-serif",color: "blue",backgroundImage: "url(./logo3.png)",backgroundSize: "cover",mixBlendMode: "multiply",backgroundPosition: "center",backgroundRepeat: "no-repeat",width: "14vh",height: "14vh",}} />
+        <img
+          src="./logo3.png"
+          alt="Logo"
+          style={{
+            textDecorationLine: "none",
+            fontFamily: "sans-serif",
+            color: "blue",
+            backgroundImage: "url(./logo3.png)",
+            backgroundSize: "cover",
+            mixBlendMode: "multiply",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            width: "14vh",
+            height: "14vh",
+          }}
+        />
         <Link
           to="/"
           style={{

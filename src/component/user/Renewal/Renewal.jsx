@@ -1,9 +1,9 @@
-const Renewal=()=>{
-    return(
-        <>
-            <h1>Renewal</h1>
-        </>
-    )
-}
+const Renewal = () => {
+  return (
+    <>
+      <h1>Renewal</h1>
+    </>
+  );
+};
 
-export default Renewal
+export default Renewal;
